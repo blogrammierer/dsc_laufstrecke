@@ -1,0 +1,16 @@
+{
+  "name": "dsc/dsc_laufstrecken",
+  "type": "wordpress-plugin",
+  "description": "Plugin zur Integration von Laufstrecken",
+  "homepage": "http://www.dennis-schlobohm.de",
+  "license": "MIT",
+  "keywords": ["courses", "google maps", "plugin"],
+  "require": {
+    "php": ">=5.4.0",
+    "wpackagist-plugin/advanced-custom-fields": "^4.4.2"
+  },
+  "authors": [{
+    "name": "Dennis Schlobohm",
+    "homepage": "Dennis Schlobohm"
+  }]
+}

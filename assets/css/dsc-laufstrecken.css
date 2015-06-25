@@ -1,0 +1,259 @@
+/* Basic */
+.clear {clear: both;}
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0px;
+}
+
+/* Map */
+#map-canvas {
+    height: 450px;
+    width: 100%;
+}
+
+/* Dialog Form */
+.dsc-courses-dialog.ui-dialog {
+    background-color: #f4f2f3;
+    padding: 0 30px 45px;
+    width: 60% !important;
+    max-width: 860px;
+}
+#dsc-courses-form-wrap .linetop {
+    position: absolute;
+    top: 15px;
+    width: 820px;
+}
+#dsc-courses-form-wrap .lineright {position: absolute; right: 15px; top: 35px;}
+#dsc-courses-form-wrap .linebottom {position: absolute; bottom: 15px; left: 45px; width: 820px;}
+#dsc-courses-form-wrap .lineleft {position: absolute; left: 15px; top: 35px;}
+
+.dsc-courses-dialog .ui-draggable .ui-dialog-titlebar {display: none;}
+
+.dsc-courses-dialog h1 {font-size: 28px; margin-top: 0;}
+.dsc-courses-dialog h2,
+.dsc-courses-dialog h3{ font-family: "OTTOSans"; font-size: 14px;}
+.dsc-courses-dialog h2.clearfix {margin-top: 40px;}
+.dsc-courses-dialog h2.clearfix span,
+.dsc-courses-dialog h2.clearfix input {float: left;}
+.dsc-courses-dialog h2.clearfix span {margin-right: 15px;}
+.dsc-courses-dialog h3 {text-transform: capitalize;}
+.dsc-courses-dialog p {margin-top: 20px;}
+
+.dsc-courses-dialog textarea,
+.dsc-courses-dialog input {
+    background: #fff; margin-bottom: 12px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.dsc-courses-dialog input[type="checkbox"] {
+    margin-right: 10px;
+    padding-top: 5px;
+    margin-bottom: 20px;
+}
+.dsc-courses-dialog input.dsc-form-error {
+    border: 1px solid #D40210;
+}
+.dsc-courses-dialog textarea {height: 160px;}
+.dsc-courses-dialog label {
+    float: left;
+    font-weight: normal;
+    margin-right: 10px;
+    padding-top: 2px;
+}
+.dsc-join a,
+.dsc-text a,
+.dsc-courses-dialog a[href^="mailto"] {color: #c8d32d; font-weight: bold; border-bottom: 0 !important;}
+
+#dsc-courses-form .col-one,
+#dsc-courses-form .col-two {float: left; width: 49%;}
+
+#dsc-courses-form .col-two {margin-left: 2%;}
+#dsc-courses-form #dsc-endpoint-wrap {display: none;}
+#dsc-courses-form #dsc-waypoint-add {display: block; text-align: right}
+#dsc-courses-form .dsc-margin {margin-top: 12px;}
+
+.dsc-courses-dialog .ui-dialog-buttonpane,
+.dsc-courses-dialog .ui-dialog-titlebar {background: none; border: 0}
+.dsc-courses-dialog #dsc-waypoint-wrap-clone {display: none;}
+.dsc-courses-dialog .ui-dialog-buttonpane {display: none;}
+
+#dsc-course-submit {
+    background: transparent;
+    background-image: url(../img/arrow-right-green.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-right: 10px;
+    color: #6a5f5c;
+    float: right;
+    font-weight: bold;
+    padding: 0;
+    text-align: left;
+    text-transform: capitalize;
+    width: 75px;
+}
+#dsc-course-submit:hover {
+    color: #c8d32d;
+}
+
+/* Widget */
+.dsc-course-cta-widget {
+    background: url(../img/bg_cta.png) no-repeat center;
+    background-size: contain;
+    color: #fff;
+    max-width: 240px;
+    padding: 2em;
+    text-align: center;
+}
+.dsc-course-cta-widget .icon-pfeilchen.dsc-icon-pfeilchen {width: 16px;}
+.dsc-course-cta-widget .icon-pfeilchen.dsc-icon-pfeilchen:hover {color: #6a5f5c; }
+.dsc-course-cta-widget .dsc-wrap-inner p {
+    text-transform: uppercase;
+}
+.dsc-course-cta-widget .dsc-wrap-inner a {border-bottom: 0; color: #fff; font-weight: bold;}
+.dsc-course-cta-widget .dsc-wrap-inner a:hover,
+.dsc-course-cta-widget .dsc-wrap-inner a:hover .dsc-icon-pfeilchen {color: #6a5f5c; fill: #6a5f5c}
+/* Search & Filter */
+#dsc-search,
+#dsc-complexity { float: left; width: 31%; margin-bottom: 1em;}
+
+#dsc-complexity {font-size: 12px; width: 69%}
+#dsc-complexity ul {display: inline-block;}
+#dsc-complexity li {
+    background: url('https://www.otto.de/von-leben-und-limonen/app/themes/main/assets/images/catlabel.svg?1434100699') no-repeat center;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 5px;
+    min-width: 6em;
+    max-width: 6em;
+    padding: 0.3em 0 0.2em 0;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+#dsc-complexity li a { border-bottom: 0; color: #6a5f5c;}
+#dsc-complexity li.dsc-scope-active { background-image: url(../img/catlabel_green.svg);}
+#dsc-complexity li.dsc-scope-active a {color: #fff;}
+#dsc-complexity #dsc-remove:hover a,
+#dsc-complexity li.dsc-scope-active a:hover {color: #6a5f5c}
+#dsc-complexity li a:hover {color: #c8d32d}
+#dsc-complexity .dsc-tooltip {
+    background: url(../img/tooltip.png) no-repeat center;
+    background-size: contain;
+    border-bottom: 0;
+    display: inline-block;
+    text-decoration: none;
+    width: 16px;
+    height: 16px;
+}
+#dsc-complexity .tooltip {}
+#dsc-complexity .tooltip-inner {
+    background: #f4f3f3;
+    color: #6a5f5c;
+    padding: 10px;
+    max-width: 350px;
+    min-width: 150px;
+}
+#dsc-complexity #dsc-remove .dsc-remove {
+    background: url(../img/close.png) no-repeat center;
+    background-size: contain;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+#dsc-complexity #dsc-remove {
+    background: transparent;
+    min-width: inherit;
+    max-width: inherit;
+    padding: 0 5px;
+    margin-top: 3px;
+}
+#dsc-complexity #dsc-remove a {color: #fff;}
+#dsc-search input {
+    background: url('https://www.otto.de/von-leben-und-limonen/app/themes/main/assets/images/suchbalken.svg?1434100699');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    box-shadow: none;
+    float: right;
+    font-size: 12px;
+    margin-right: 5px;
+    padding: 5px 10px;
+    width: 170px;
+    background-position: center center;
+}
+#dsc-search .dsc-icon-lupe {
+    float: right;
+}
+#dsc-search .dsc-icon-lupe:hover {
+    cursor: pointer;
+}
+.dsc-btn.dsc-btn-cta {
+    background: url(../img/bg-green.png) no-repeat center left;
+    font-weight: bold;
+    line-height: 65px;
+    padding: 0 15px;
+    color: #fff;
+    width: 215px;
+    display: inline-block;
+    border: 0;
+    text-decoration: none;
+}
+.dsc-btn.dsc-btn-cta:hover {
+    background-image: url(../img/bg-darkgrey.png);
+}
+.dsc-btn.dsc-btn-cta:hover .dsc-icon-pfeilchen {fill: #fff; }
+
+.dsc-btn .dsc-icon-pfeilchen {
+    padding-top: 28px;
+    width: 30px;
+    height: 40px;
+    display: inline-block;
+    fill: #fff;
+}
+
+/* Join */
+.dsc-join ol {margin-left: 20px;}
+
+/* Infobox */
+.dsc-item,
+.dsc-infobox {padding: 10px;  in-width: 250px;}
+.dsc-infobox p {font-weight: bold}
+.dsc-infobox p .dsc-label {font-weight: normal}
+
+.dsc-feed .dsc-row-wrap .dsc-item img,
+.dsc-infobox .dsc-infobox-blogger img {float: left; margin-right: 15px;}
+.dsc-infobox .dsc-infobox-blogger .row {clear: both; float: left;}
+.dsc-feed .dsc-feed-infos a,
+.dsc-infobox .dsc-infobox-blogger a {color: #c8d32d; border-bottom: 0; text-decoration: none;}
+.dsc-feed .dsc-feed-infos .dsc-subline,
+.dsc-infobox .dsc-infobox-blogger .dsc-subline {
+    color: #10afaa;
+    font-size: 16px;
+    font-weight: bold;
+}
+.dsc-infobox .dsc-label {text-transform: uppercase; display: inline-block; margin-right: 5px;}
+.dsc-infobox .dsc-label.dsc-end {margin-left: 15px;}
+.dsc-infobox .dsc-city,
+.dsc-infobox .dsc-desc {margin-top: 1em; margin-bottom: 0;}
+
+/* Feed */
+.dsc-feed .dsc-row-wrap .dsc-item {
+    border-bottom: 1px solid #eee;
+    float: left;
+    margin-left: 4%;
+    width: 48%;
+}
+.dsc-feed .dsc-row-wrap .dsc-item:hover {cursor: pointer;}
+.dsc-feed .dsc-row-wrap .dsc-item:first-child {margin-left: 0;}
+.dsc-feed .dsc-row-wrap {clear: both;}
+.dsc-feed .dsc-feed-infos {font-size: 12px;}
+.dsc-feed .dsc-feed-infos .dsc-subline {font-size: 14px;}
