@@ -16,25 +16,6 @@ function dsc_map_init($attr) {
             'post_status' => 'publish'
         )
     );
-/*
-    $xml = simplexml_load_file("C:\\xampp\\htdocs\\wordpress\\wp-content\\uploads\\2015\\06\\zip_96\\diary.kml");
-    foreach($xml->Document->Placemark as $placemark) {
-        if(property_exists($placemark, "styleUrl")) {
-            $coords = explode(" ", $placemark->LineString->coordinates);
-            for($i=0; $i<count($coords); $i++) {
-                $lngLat = explode(",", $coords[$i]);
-                $latLng = array_reverse($lngLat);
-                if($i==0) {
-                    $start = $latLng;
-                } else if($i == count($coords)-1) {
-                    $end = $latLng;
-                } else {
-                    array_push($waypoints, $latLng);
-                }
-            }
-        }
-    }
-*/
 
     $url = plugin_dir_url(dirname( __FILE__));
     $courses = array();
@@ -86,8 +67,7 @@ function dsc_map_init($attr) {
     $html .= '<div class="dsc-join">';
     $html .= '<h3>So bist du dabei:</h3>';
     $html .= '<ol>
-        <li>Trage deine Laufstrecke aus deiner Lauf-App ein (gpx und kmz Datei).</li>
-        <li>Wenn du keine Lauf-App hast, trage den Start- und Endpunkt der Strecke über GPS Koordinaten ein.</li>
+        <li>Trage deine Laufstrecke über GPS Koordinaten ein.</li>
         <li>Lade ein persönliches Bild und zusätzlich Infos (z.B. deinen Blog) hoch.</li>
         <li>Poste die Laufstrecke auf deinem Blog und erzähle, was besonders an dieser Strecke ist.</li>
         <li>Schick uns eine E-Mail an <a href="mailto:kooperation@otto.de">kooperation@otto.de</a> um das gedruckte E-Book <a href="https://www.otto.de/shoppages/richtig-laufen-ebook">"Richtig Laufen"</a> zugeschickt zu bekommen.</li>
@@ -111,7 +91,7 @@ function dsc_map_form($attr) {
     $html .= '<h2 class="clearfix"><span>1. Trage einfach die GPS-Koordinaten* deiner Strecke ein:</span></h2>';
     $html .= '<div class="col-wrap clearfix">';
     $html .= '<div class="col-one">';
-    $html .= '<h3>Startpunkt:</h3>';
+    $html .= '<h3>Startpunkt*:</h3>';
     $html .= '<input name="dsc-course-start-lat" id="dsc-course-start-lat" type="text" placeholder="Latitude (z.B. 52.505213)" /><input name="dsc-course-start-lon" id="dsc-course-start-lon" type="text" placeholder="Longitude (z.B. 9.988085)" />';
     $html .= '<div><input type="checkbox" name="dsc-open-endpoint" id="dsc-open-endpoint" /><span class="dsc-label">Endpunkt ist nicht Startpunkt</span></div>';
     $html .= '</div>';
@@ -132,7 +112,6 @@ function dsc_map_form($attr) {
     $html .= '</div>';
     $html .= '</div>';
     $html .= '<a href="#" id="dsc-waypoint-add">+ weiteren Wegpunkt hinzufügen</a>';
-    //$html .= '<p>*gpx oder kmz Dateien kannst du aus deiner LaufApp exportieren.';
     $html .= '<div class="col-wrap dsc-margin clearfix">';
     $html .= '<div class="col-one">';
     $html .= '<h2>2. Beschreibe deine Strecke (optional):</h2>';
