@@ -27,7 +27,7 @@
     width: 820px;
 }
 
-.ui-dialog-titlebar .dsc-courses-dialog .ui-dialog-titlebar-close {
+.dsc-courses-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
     background-color: transparent;
     border: 0;
     position: absolute;
@@ -58,16 +58,18 @@
     -o-transition: all 0.5s;
     transition: all 0.5s;
     padding: 0.5278em;
+    width: 90%;
 }
 .dsc-courses-dialog input[type="checkbox"] {
     margin-right: 10px;
     padding-top: 5px;
     margin-bottom: 20px;
+    width: auto;
 }
 .dsc-courses-dialog input.dsc-form-error {
     border: 1px solid #D40210;
 }
-.dsc-courses-dialog textarea {height: 160px;}
+.dsc-courses-dialog textarea {height: 160px; width: 90%;}
 .dsc-courses-dialog label {
     float: left;
     font-weight: normal;
