@@ -258,6 +258,20 @@
 .dsc-infobox .dsc-city,
 .dsc-infobox .dsc-desc {margin-top: 1em; margin-bottom: 0;}
 
+
+/* Prices */
+#dsc-prices p {
+    font-weight: bold;
+}
+#dsc-prices .dsc-number {
+    background: #c8d32d;
+    color: #fff;
+    display: inline-block;
+    margin-right: 1em;
+    border-radius: 12px;
+    padding: 2px 8px;
+}
+
 /* Feed */
 .dsc-feed .dsc-row-wrap .dsc-item {
     border-bottom: 1px solid #eee;
