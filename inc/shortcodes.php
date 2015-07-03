@@ -5,6 +5,7 @@ add_shortcode('dsc_map_form', 'dsc_map_form');
 add_shortcode('dsc_cta_button', 'dsc_cta_button');
 add_shortcode('dsc_feed', 'dsc_feed');
 add_shortcode('dsc_cta_widget', 'dsc_cta_widget');
+add_shortcode('dsc_prices', 'dsc_prices');
 
 function dsc_map_init($attr) {
     $attr = shortcode_atts( array(
@@ -46,7 +47,7 @@ function dsc_map_init($attr) {
         );
         array_push($courses, $tmpArr);
     }
-    $html = '<p class="dsc-text">Der Sommer steht vor der Tür und mit ihm sieht man immer mehr sporttreibende Menschen auf den Straßen. Egal ob morgens vor der Arbeit oder abends, Laufen ist immer und überall möglich. In den letzten Jahren ist dieser Sport fast schon zu einer Bewegung geworden. Politiker wie Joschka Fischer beschreiben sogar in einem Buch, wie das Joggen sie selber verändert hat. Firmen veranstalten regelmäßige Laufevents und Prominente geben Tipps in Ratgebern, welcher Schuh den besten Lauf garantiert.
+    $html = '<div class="pull-right">'. do_shortcode('[dsc_cta_widget]') .'</div><p class="dsc-text">Der Sommer steht vor der Tür und mit ihm sieht man immer mehr sporttreibende Menschen auf den Straßen. Egal ob morgens vor der Arbeit oder abends, Laufen ist immer und überall möglich. In den letzten Jahren ist dieser Sport fast schon zu einer Bewegung geworden. Politiker wie Joschka Fischer beschreiben sogar in einem Buch, wie das Joggen sie selber verändert hat. Firmen veranstalten regelmäßige Laufevents und Prominente geben Tipps in Ratgebern, welcher Schuh den besten Lauf garantiert.
                 </p><p class="dsc-text">Auf der Karte sind die verschiedenen Laufstrecken unserer Teilnehmer verzeichnet. Auch du kannst dabei sein: Mach mit und zeige uns deine Lieblingstrecke! Als Dankeschön erhälst du ein gedrucktes Exemplar vom E-Books <a href="https://www.otto.de/shoppages/richtig-laufen-ebook">"Richtig Laufen"</a>.</p>';
     $html .= do_shortcode("[dsc_cta_button]");
     $html .= '<script>';
@@ -229,6 +230,29 @@ function dsc_cta_widget($attr,  $content = null)
     $html .= '</div></div>';
 
     return $html;
+}
+
+function dsc_prices($attr) {
+    $attr = shortcode_atts(array(
+        'title' => 'Jetzt mitmachen!'
+    ), $attr);
+    $url = plugin_dir_url(dirname( __FILE__));
+    $img_path = $url . 'assets/img';
+    $html = '<div id="prices" class="container">';
+    $html .= '<div class="col-md-12><h2>Wer bei unserer Aktion mitmacht, kann folgendes gewinnen</h2></div>';
+    $html .= '<div class="col-md-4">';
+    $html .= '<img src="'.$img_path.'/preis-1.jpg" alt="Zwei Garmin Laufuhren im Wert von jeweils 399,99 Euro">';
+    $html .= '<p class=""><span class="dsc-number">1</span>Zwei Garmin Laufuhren im Wert von jeweils 399,99 Euro</p>';
+    $html .= '</div>';
+    $html .= '<div class="col-md-4">';
+    $html .= '<img src="'.$img_path.'/preis-2.jpg" alt="Zwei Garmin Laufuhren im Wert von jeweils 399,99 Euro">';
+    $html .= '<p class=""><span class="dsc-number">2</span>Fünf Striiv Activity Tracker im Wert von 79,99 Euro</p>';
+    $html .= '</div>';
+    $html .= '<div class="col-md-4">';
+    $html .= '<p class=""><span class="dsc-number">3</span>Zwei Gutscheine im Wert von jeweils 50 Euro, einlösbar für das gesamte Otto-Sortiment</p>';
+    $html .= '</div>';
+    $html .= '</div>';
+
 }
 
 ?>
