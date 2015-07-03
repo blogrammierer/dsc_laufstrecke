@@ -26,6 +26,14 @@
     top: 15px;
     width: 820px;
 }
+
+.ui-dialog-titlebar .dsc-courses-dialog .ui-dialog-titlebar-close {
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 #dsc-courses-form-wrap .lineright {position: absolute; right: 15px; top: 35px;}
 #dsc-courses-form-wrap .linebottom {position: absolute; bottom: 15px; left: 45px; width: 820px;}
 #dsc-courses-form-wrap .lineleft {position: absolute; left: 15px; top: 35px;}
@@ -49,6 +57,7 @@
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
+    padding: 0.5278em;
 }
 .dsc-courses-dialog input[type="checkbox"] {
     margin-right: 10px;
@@ -87,6 +96,7 @@
     background-image: url(../img/arrow-right-green.png);
     background-repeat: no-repeat;
     background-position: right;
+    border: 0;
     padding-right: 10px;
     color: #6a5f5c;
     float: right;
@@ -179,6 +189,7 @@
 #dsc-complexity #dsc-remove a {color: #fff;}
 #dsc-search input {
     background: url('https://www.otto.de/von-leben-und-limonen/app/themes/main/assets/images/suchbalken.svg?1434100699');
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     border: none;
@@ -188,7 +199,7 @@
     margin-right: 5px;
     padding: 5px 10px;
     width: 170px;
-    background-position: center center;
+    outline: none;
 }
 #dsc-search .dsc-icon-lupe {
     float: right;
@@ -203,7 +214,7 @@
     padding: 0 15px;
     color: #fff;
     width: 215px;
-    display: inline-block;
+    display: block;
     border: 0;
     text-decoration: none;
 }
