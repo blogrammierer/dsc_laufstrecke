@@ -23,7 +23,7 @@ function dsc_add_js() {
  * CSS
  */
 function dsc_add_css() {
-    wp_register_style('dsc-laufstrecken-css', plugin_dir_url(dirname( __FILE__)) . 'assets/css/dsc-laufstrecken.css', array(), '1.0.0', 'all');
+    wp_register_style('dsc-laufstrecken-css', plugin_dir_url(dirname( __FILE__)) . 'assets/css/dsc-laufstrecken.css', array(), '1.0.1', 'all');
     wp_enqueue_style('dsc-laufstrecken-css');
 
     wp_enqueue_style("wp-jquery-ui-dialog");

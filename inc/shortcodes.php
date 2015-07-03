@@ -241,11 +241,11 @@ function dsc_prices($attr) {
     $html = '<div id="prices" class="row">';
     $html .= '<div class="col-md-12"><h2>Wer bei unserer Aktion mitmacht, kann folgendes gewinnen</h2></div>';
     $html .= '<div class="col-md-4">';
-    $html .= '<img src="'.$img_path.'/preis-1.jpg" alt="Zwei Garmin Laufuhren im Wert von jeweils 399,99 Euro">';
+    $html .= '<img src="'.$img_path.'/preis-1.png" alt="Zwei Garmin Laufuhren im Wert von jeweils 399,99 Euro">';
     $html .= '<p class=""><span class="dsc-number">1</span>Zwei Garmin Laufuhren im Wert von jeweils 399,99 Euro</p>';
     $html .= '</div>';
     $html .= '<div class="col-md-4">';
-    $html .= '<img src="'.$img_path.'/preis-2.jpg" alt="Zwei Garmin Laufuhren im Wert von jeweils 399,99 Euro">';
+    $html .= '<img src="'.$img_path.'/preis-2.png" alt="Zwei Garmin Laufuhren im Wert von jeweils 399,99 Euro">';
     $html .= '<p class=""><span class="dsc-number">2</span>Fünf Striiv Activity Tracker im Wert von 79,99 Euro</p>';
     $html .= '</div>';
     $html .= '<div class="col-md-4">';
