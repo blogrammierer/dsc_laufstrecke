@@ -238,7 +238,7 @@ function dsc_prices($attr) {
     ), $attr);
     $url = plugin_dir_url(dirname( __FILE__));
     $img_path = $url . 'assets/img';
-    $html = '<div id="prices" class="row">';
+    $html = '<div id="dsc-prices" class="row">';
     $html .= '<div class="col-md-12"><h2>Wer bei unserer Aktion mitmacht, kann folgendes gewinnen</h2></div>';
     $html .= '<div class="col-md-4 col-md-offset-2 col-xs-6">';
     $html .= '<img src="'.$img_path.'/preis-1.png" alt="Zwei Garmin Laufuhren im Wert von jeweils 399,99 Euro">';
