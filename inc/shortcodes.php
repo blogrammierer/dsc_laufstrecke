@@ -149,9 +149,9 @@ function dsc_cta_button($attr) {
 
 function dsc_feed($attr) {
     function getComplexityString($val) {
-        if($val<=5000) {
+        if($val<=5) {
             return "einfach";
-        } else if( $val <= 10000) {
+        } else if( $val <= 10) {
             return "mittel";
         }
         return "schwer";
