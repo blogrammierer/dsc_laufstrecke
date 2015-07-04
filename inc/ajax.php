@@ -80,7 +80,7 @@ function dsc_courses_form_callback() {
             && isset($_REQUEST['dsc-waypoints-lon']) && is_array($_REQUEST['dsc-waypoints-lon'])
         ) {
             for($i=0;$i<count($_REQUEST['dsc-waypoints-lat']);$i++) {
-                if(trim($_REQUEST['dsc-waypoints-lat'])!='' && trim($_REQUEST['dsc-waypoints-lon'])!='') {
+                if(trim($_REQUEST['dsc-waypoints-lat'][$i])!='' && trim($_REQUEST['dsc-waypoints-lon'][$i])!='') {
                     array_push($waypointsArr, array($_REQUEST['dsc-waypoints-lat'][$i], $_REQUEST['dsc-waypoints-lon'][$i]));
                 }
             }
