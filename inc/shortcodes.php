@@ -169,7 +169,7 @@ function dsc_feed($attr) {
         )
     );
 
-    $html = '<div class="dsc-feed">';
+    $html = '<div class="dsc-feed clearfix">';
     $html .= '<div class="col-xs-12"><hr></div>';
     $html .= '<h2>'.$attr['title'].'</h2>';
     $html .= '<div class="dsc-row-wrap">';

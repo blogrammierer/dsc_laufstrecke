@@ -242,6 +242,7 @@
 .dsc-infobox p {font-weight: bold}
 .dsc-infobox p .dsc-label {font-weight: normal}
 
+.dsc-feed {margin-bottom: 45px;}
 .dsc-feed .dsc-row-wrap .dsc-item img,
 .dsc-infobox .dsc-infobox-blogger img {float: left; margin-right: 15px;}
 .dsc-infobox .dsc-infobox-blogger .row {clear: both; float: left;}
