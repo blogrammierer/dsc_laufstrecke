@@ -32,7 +32,7 @@ function dsc_map_init($attr) {
         $tmpArr = array(
             'id' => $course->ID,
             'title' => $course->post_title,
-            'desc' =>  wp_trim_words($course->post_content, 25),
+            'desc' =>  wp_trim_words($course->post_content, 2500),
             'date' => $date->format("d.m.Y"),
             'blogger_name' => get_post_meta($course->ID, 'blogger_name')[0],
             'blogger_url' =>  get_post_meta($course->ID, 'blogger_url')[0],
