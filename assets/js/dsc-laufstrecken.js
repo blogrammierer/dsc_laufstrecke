@@ -216,7 +216,7 @@ jQuery(document).ready(function($) {
 
                 // add waypoints if exists
                 waypts = [];
-                if(item.waypoints.length>0) {
+                if(item.waypoints && item.waypoints.length > 0) {
                     waypts.push({
                         location: new google.maps.LatLng(item.waypoints[0][0],item.waypoints[0][1]),
                         stopover: false
@@ -311,7 +311,7 @@ jQuery(document).ready(function($) {
             totalDistance += route.steps[i].distance.value;
             totalDuration += route.steps[i].duration.value;
         }*/
-        console.log(item);
+
         html = '<div class="dsc-infobox">';
         html = html + '<div class="dsc-infobox-blogger clearfix">';
         html = html + '<img width="64" height="64" src="' + item.blogger_img + '" alt="' + item.blogger_name + '" />';
@@ -381,13 +381,13 @@ jQuery(document).ready(function($) {
                         directionsDisplay[i].setMap(map);
                     }
                 } else if($(obj).data("scope")==2) {
-                    if(parseInt(item.length) >scope_low && parseInt(item.length) <= scope_medium) {
+                    if(parseInt(item.length) > scope_low && parseInt(item.length) <= scope_medium) {
                         addMarker(markerArr[0]);
                         addMarker(markerArr[1]);
                         directionsDisplay[i].setMap(map);
                     }
                 } else {
-                    if(parseInt(item.length) >scope_medium && parseInt(item.length) <= scope_high) {
+                    if(parseInt(item.length) > scope_medium) {
                         addMarker(markerArr[0]);
                         addMarker(markerArr[1]);
                         directionsDisplay[i].setMap(map);
