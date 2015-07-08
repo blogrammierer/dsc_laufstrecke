@@ -285,3 +285,8 @@
 .dsc-feed .dsc-row-wrap {clear: both;}
 .dsc-feed .dsc-feed-infos {font-size: 12px;}
 .dsc-feed .dsc-feed-infos .dsc-subline {font-size: 14px;}
+.dsc-feed .dsc-img-dummy {
+    float: left;
+    height: 48px;
+    width: 64px;
+}

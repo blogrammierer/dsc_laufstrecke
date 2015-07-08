@@ -14,7 +14,8 @@ function dsc_map_init($attr) {
     $raw_courses = get_posts(
         array(
             'post_type' => 'laufstrecke',
-            'post_status' => 'publish'
+            'post_status' => 'publish',
+            'posts_per_page' => -1
         )
     );
 
@@ -165,7 +166,8 @@ function dsc_feed($attr) {
     $raw_courses = get_posts(
         array(
             'post_type' => 'laufstrecke',
-            'post_status' => 'publish'
+            'post_status' => 'publish',
+            'posts_per_page' => -1
         )
     );
 
@@ -193,7 +195,11 @@ function dsc_feed($attr) {
         $length_txt = $length . " km";
 
         $html .= '<div class="dsc-item" data-course_id="'.$course->ID.'">';
-        $html .= '<img height="48" width="48" src="'.$img_src_url.'" alt="" />';
+        if($img_src_url != '') {
+            $html .= '<img height="48" width="48" src="'.$img_src_url.'" alt="" />';
+        } else {
+            $html .= '<span class="dsc-img-dummy"></span>';
+        }
         $html .= '<div class="dsc-feed-infos">';
         $html .= '<div class="dsc-row"><span class="dsc-date">'.$date->format("d.m.Y").'</span>, ';
         $html .= '<a href="'.get_post_meta($course->ID, 'blogger_url')[0].'" class="dsc-blogger-name" target="_blank">'.get_post_meta($course->ID, 'blogger_name')[0].'</a>';
