@@ -314,7 +314,9 @@ jQuery(document).ready(function($) {
 
         html = '<div class="dsc-infobox">';
         html = html + '<div class="dsc-infobox-blogger clearfix">';
-        html = html + '<img width="64" height="64" src="' + item.blogger_img + '" alt="' + item.blogger_name + '" />';
+        if(item.blogger_img!='') {
+            html = html + '<img width="64" height="64" src="' + item.blogger_img + '" alt="' + item.blogger_name + '" />';
+        }
         html = html + '<div class="dsc-row">';
         html = html + '<span class="date">'+item.date+'</span>, ';
         html = html + '<a href="' + item.blogger_url + '" target="_blank">' + item.blogger_name + '</a>';
