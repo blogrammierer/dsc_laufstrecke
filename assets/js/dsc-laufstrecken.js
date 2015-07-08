@@ -268,7 +268,7 @@ jQuery(document).ready(function($) {
         markerIcon = greenIcon;
         if(totalDistance >= scope_low && totalDistance < scope_medium) {
             markerIcon = orangeIcon;
-        } else if (totalDistance >= scope_high) {
+        } else if (totalDistance >= scope_medium) {
             markerIcon = redIcon;
         }
         var startMarker = new google.maps.Marker({
