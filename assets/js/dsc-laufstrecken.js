@@ -352,8 +352,9 @@ jQuery(document).ready(function($) {
         dist = (Math.round((parseInt(val))*10, 1)/10)+"";
         return dist.replace(".",",") + " km";
     }
-
-    google.maps.event.addDomListener(window, 'load', initialize);
+    if($("#map-canvas").length) {
+        google.maps.event.addDomListener(window, 'load', initialize);
+    }
 
 
     /**
